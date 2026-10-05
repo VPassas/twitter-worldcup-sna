@@ -1,10 +1,19 @@
-# ITC 4441 — Web Science & Social Media Platform Analytics
+# Twitter World Cup — Social Network Analysis & Recommender
 
-Social-network analysis of a Twitter dataset from the **2014 FIFA World Cup**. The
-project builds a user-to-user interaction network and answers three questions:
-influence, communities, and a link-prediction recommender.
+> Large-scale social-network analysis of ~5.1M tweets from the **2014 FIFA World Cup**:
+> influence ranking, community detection, and a machine-learning link-prediction
+> recommender — built end-to-end on a **2M-node / 3.9M-edge** interaction graph.
 
-> Deree — The American College of Greece · Spring Semester 2026
+**Tech stack:** Python · NetworkX · scikit-learn · NumPy/SciPy · Matplotlib · TF-IDF + Truncated SVD · Louvain · MLP / kNN
+
+### Highlights
+- Built a directed user-to-user graph (mention / reply / retweet) from 5.1M raw tweets → **2,044,100 nodes, 3,929,041 edges**.
+- Tested the power-law hypothesis on in/out-degree distributions (log-log OLS fit).
+- Ranked influencers by degree centrality, **PageRank**, and exact **betweenness**, then characterised them with TF-IDF topic tags.
+- Detected **~41k communities** with Louvain (modularity ≈ 0.75) and labelled them by dominant hashtags/topics.
+- Engineered hybrid user embeddings (network + content features) and evaluated a link-prediction recommender with **Precision@k / Recall@k**.
+
+> Course project — Deree, The American College of Greece · ITC 4441 Web Science & Social Media Platform Analytics · Spring 2026
 > Author: Evangelos Passas
 
 ## Dataset
