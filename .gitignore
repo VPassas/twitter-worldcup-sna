@@ -1,0 +1,21 @@
+# ---- Dataset (large, not version-controlled) ----
+twitter_world_cup_part1/
+*.zip
+*.7z
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ---- Large generated output (regenerate by running the scripts) ----
+# The scripts write big .data files (tens to hundreds of MB) here.
+# The small plots (*.png) are kept so results are visible without the dataset.
+project_output/*.data
+
+# ---- Scratch / logs / local reports ----
+run_log*.txt
+output*.txt
+*.docx
