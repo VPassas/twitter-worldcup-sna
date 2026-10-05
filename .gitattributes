@@ -1,0 +1,11 @@
+# Normalize line endings: text files use LF in the repo, auto-converted on checkout.
+* text=auto
+
+# Scripts explicitly LF / CRLF
+*.py   text eol=lf
+*.sh   text eol=lf
+*.bat  text eol=crlf
+
+# Treat generated/binary assets as binary (no EOL conversion, no diff noise)
+*.png  binary
+*.data binary
